@@ -61,7 +61,7 @@ const Header = ({ isSidebarCollapsed, setShowSidebar, isMobile, showSidebar }) =
       // On mobile, simply show/hide the sidebar overlay
       setShowSidebar(!showSidebar); // Toggle the sidebar state
     } else {
-      // On desktop, toggle between hidden and full sidebar (not collapsed)
+      // On desktop, if sidebar is collapsed, always show full sidebar first
       if (document.body.classList.contains('vertical-collpsed')) {
         document.body.classList.remove('vertical-collpsed');
       } else {
