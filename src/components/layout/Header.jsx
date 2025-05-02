@@ -52,7 +52,7 @@ const Header = ({ isSidebarCollapsed, setShowSidebar, isMobile, showSidebar }) =
   const handleLogout = (e) => {
     e.preventDefault();
     logout();
-    window.location.href = '/login';
+    window.location.href = '/';
   };
 
   // Toggle sidebar: always show full sidebar on toggle click

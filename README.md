@@ -111,6 +111,18 @@ The application requires a backend API to function properly. The API base URL is
 
 Authentication is handled using JWT tokens, which are stored in localStorage. User session management is handled by the `userState` service.
 
+## Login Credentials for Testing
+
+### Admin:
+
+- ID: chandan.pandey@velsof.com
+- Password: 12345
+
+### Vendor (Registered for testing):
+
+- ID: rautishm@gmail.com
+- Password: 1234
+
 ## Contributing
 
 1. Fork the repository
