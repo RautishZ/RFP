@@ -172,7 +172,7 @@ export const updateVendorStatus = async (userId, status) => {
     console.log('Sending status update request:', { user_id: userId, status });
 
     // Make API request to update vendor status using PUT method with correct endpoint
-    const response = await api.put('/approveVendor', {
+    const response = await api.post('/approveVendor', {
       user_id: userId,
       status: status
     });
