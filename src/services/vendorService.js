@@ -34,13 +34,22 @@ export const registerVendor = async (vendorData) => {
     const { data } = response;
     
     if (data.response === 'success') {
-      showSuccessToast('Registration successful! You can now login.', {
+      // Clear any existing localStorage data to ensure a clean state for login
+      localStorage.clear();
+      
+      showSuccessToast('Registration successful! Redirecting to login page...', {
         position: "top-center",
-        autoClose: 5000,
+        autoClose: 3000,
         hideProgressBar: false,
         closeOnClick: true,
         pauseOnHover: true,
       });
+      
+      // After a short delay, redirect to login with page reload
+      setTimeout(() => {
+        window.location.href = '/login';
+      }, 2000);
+      
       return data;
     } else {
       const errorMessages = Array.isArray(data.error) ? data.error : [data.error || 'Registration failed'];
