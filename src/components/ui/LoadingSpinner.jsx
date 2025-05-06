@@ -7,11 +7,6 @@ import PropTypes from 'prop-types';
 
 /**
  * LoadingSpinner component
- * @param {Object} props - Component props
- * @param {string} props.size - Size of the spinner (sm, md, lg)
- * @param {string} props.color - Color of the spinner (primary, secondary, success, etc.)
- * @param {string} props.text - Text to display below spinner
- * @param {string} props.className - Additional CSS classes
  */
 const LoadingSpinner = ({
   size = '',

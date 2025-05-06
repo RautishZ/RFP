@@ -11,9 +11,6 @@ import {
 
 /**
  * Get RFP list by user ID or RFP details with quotes by RFP ID
- * @param {number} id - User ID to fetch RFPs for or RFP ID to fetch details with quotes
- * @param {boolean} isSingleRfp - If true, treats the ID as an RFP ID instead of a user ID
- * @returns {Promise} - Promise with RFP data or RFP with quotes
  */
 export const getRFPsByUserId = async (id, isSingleRfp = false) => {
   try {
@@ -45,8 +42,6 @@ export const getRFPsByUserId = async (id, isSingleRfp = false) => {
 
 /**
  * Get all RFPs (Admin only)
- * @param {number} adminId - Admin ID to fetch RFPs for
- * @returns {Promise} - Promise with all RFPs data
  */
 export const getAllRFPs = async (adminId) => {
   try {
@@ -81,8 +76,6 @@ export const getAllRFPs = async (adminId) => {
 
 /**
  * Close an RFP
- * @param {number} rfpId - ID of the RFP to close
- * @returns {Promise} - Promise with the operation result
  */
 export const closeRFP = async (rfpId) => {
   try {
@@ -107,7 +100,6 @@ export const closeRFP = async (rfpId) => {
 
 /**
  * Get all available categories
- * @returns {Promise} - Promise with categories data as an array
  */
 export const getCategories = async () => {
   try {
@@ -152,8 +144,6 @@ export const getCategories = async () => {
 
 /**
  * Get vendors by category ID
- * @param {number} categoryId - Category ID to fetch vendors for
- * @returns {Promise} - Promise with vendors data (only approved vendors)
  */
 export const getVendorsByCategory = async (categoryId) => {
   try {
@@ -205,8 +195,6 @@ export const getVendorsByCategory = async (categoryId) => {
 
 /**
  * Create a new RFP
- * @param {Object} rfpData - Data for creating a new RFP
- * @returns {Promise} - Promise with the operation result
  */
 export const createRFP = async (rfpData) => {
   try {
@@ -261,9 +249,6 @@ export const createRFP = async (rfpData) => {
 
 /**
  * Apply for an RFP (Vendor Action)
- * @param {number} rfpId - ID of the RFP to apply for
- * @param {Object} quoteData - Quote data submitted by vendor
- * @returns {Promise} - Promise with the operation result
  */
 export const applyForRFP = async (rfpId, quoteData) => {
   try {
@@ -307,8 +292,6 @@ export const applyForRFP = async (rfpId, quoteData) => {
 
 /**
  * Get quotes for a specific RFP
- * @param {number} rfpId - ID of the RFP to fetch quotes for
- * @returns {Promise} - Promise with quotes data
  */
 export const getRFPQuotes = async (rfpId) => {
   try {

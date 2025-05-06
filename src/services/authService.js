@@ -9,10 +9,6 @@ import { showErrorToast, showSuccessToast } from './utils';
 
 /**
  * Authenticates a user with email and password
- * @param {string} email - User's email address
- * @param {string} password - User's password
- * @returns {Promise<Object>} User data on successful login
- * @throws {Error} If authentication fails
  */
 export const login = async (email, password) => {
   try {

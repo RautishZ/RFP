@@ -7,14 +7,6 @@ import PropTypes from 'prop-types';
 
 /**
  * Card component
- * @param {Object} props - Component props
- * @param {string} props.title - Card title
- * @param {React.ReactNode} props.children - Card content
- * @param {string} props.className - Additional CSS classes
- * @param {boolean} props.isLoading - Whether card is in loading state
- * @param {string} props.headerClassName - Additional CSS classes for card header
- * @param {string} props.bodyClassName - Additional CSS classes for card body
- * @param {React.ReactNode} props.headerActions - Additional elements to render in card header
  */
 const Card = ({
   title,

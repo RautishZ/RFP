@@ -63,8 +63,6 @@ const Vendors = () => {
 
   /**
    * Handle vendor status change by updating only the affected vendor in the state
-   * @param {number} userId - ID of the vendor whose status changed
-   * @param {string} newStatus - The new status value
    */
   const handleVendorStatusChange = useCallback((userId, newStatus) => {
     // Update local state without fetching from server again
@@ -97,7 +95,6 @@ const Vendors = () => {
 
   /**
    * Handle pagination page change
-   * @param {number} pageNumber - New page number
    */
   const handlePageChange = (pageNumber) => {
     setCurrentPage(pageNumber);

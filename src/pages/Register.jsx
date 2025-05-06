@@ -68,7 +68,6 @@ const Register = () => {
 
   /**
    * Handles input field changes
-   * @param {Event} e - Input change event
    */
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -116,8 +115,6 @@ const Register = () => {
 
   /**
    * Checks if a category is selected
-   * @param {string} categoryId - Category ID to check
-   * @returns {boolean} True if category is selected
    */
   const isCategorySelected = (categoryId) => {
     return formData.category.includes(categoryId);
@@ -125,7 +122,6 @@ const Register = () => {
 
   /**
    * Validates form data before submission
-   * @returns {boolean} True if form is valid, false otherwise
    */
   const validateForm = () => {
     const newErrors = {};
@@ -201,7 +197,6 @@ const Register = () => {
 
   /**
    * Handles form submission
-   * @param {Event} e - Form submit event
    */
   const handleSubmit = async (e) => {
     e.preventDefault();

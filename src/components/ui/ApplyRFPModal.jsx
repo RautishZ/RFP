@@ -4,12 +4,6 @@ import { Modal } from 'react-bootstrap';
 
 /**
  * A dedicated modal component for applying to RFPs
- * @param {Object} props Component props
- * @param {boolean} props.show Whether the modal is visible
- * @param {Function} props.onHide Function to close the modal
- * @param {Object} props.selectedRfp The RFP data for which the quote is being submitted
- * @param {Function} props.onSubmit Function to submit the quote
- * @param {boolean} props.isSubmitting Whether a submission is in progress
  */
 const ApplyRFPModal = ({ 
   show, 

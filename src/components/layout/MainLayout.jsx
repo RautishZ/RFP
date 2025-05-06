@@ -19,9 +19,6 @@ import '../../assets/libs/datatables.net-responsive-bs4/css/responsive.bootstrap
 
 /**
  * MainLayout component for authenticated pages
- * @param {Object} props - Component props
- * @param {React.ReactNode} props.children - Child components to render in layout
- * @param {string} props.pageTitle - Title of the page to display in header and breadcrumbs
  */
 const MainLayout = ({ children, pageTitle = 'Dashboard' }) => {
   const [isSidebarCollapsed, setIsSidebarCollapsed] = useState(false);

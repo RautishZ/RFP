@@ -94,7 +94,6 @@ const RFP = () => {
 
   /**
    * Handle closing an RFP
-   * @param {number} rfpId - ID of the RFP to close
    */
   const handleCloseRFP = async (rfpId) => {
     try {
@@ -122,8 +121,6 @@ const RFP = () => {
 
   /**
    * Handle applying for an RFP (vendor action)
-   * @param {number} rfpId - ID of the RFP to apply for
-   * @param {Object} quoteData - Quote data with item price and total cost
    */
   const handleApplyRFP = async (rfpId, quoteData) => {
     if (applyingForRfp) return; // Prevent multiple submissions
@@ -169,7 +166,6 @@ const RFP = () => {
 
   /**
    * Handle viewing quotes for an RFP
-   * @param {number} rfpId - ID of the RFP to view quotes for
    */
  
 

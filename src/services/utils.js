@@ -26,8 +26,6 @@ export const handleAuthorizationFailure = () => {
 
 /**
  * Checks if an error message indicates an authorization failure
- * @param {string} message - Error message to check
- * @returns {boolean} True if the message indicates an authorization failure
  */
 export const isAuthorizationError = (message) => {
   if (!message || typeof message !== 'string') return false;
@@ -37,8 +35,6 @@ export const isAuthorizationError = (message) => {
 
 /**
  * Extracts error message from API error response
- * @param {Object} error - Error object from API response
- * @returns {string} Formatted error message
  */
 export const extractErrorMessage = (error) => {
   // First check for structured error response
@@ -63,8 +59,6 @@ export const extractErrorMessage = (error) => {
 
 /**
  * Displays an error toast with the given message
- * @param {string} message - Error message to display
- * @param {Object} options - Toast options
  */
 export const showErrorToast = (message, options = {}) => {
   toast.error(message, {
@@ -76,8 +70,6 @@ export const showErrorToast = (message, options = {}) => {
 
 /**
  * Displays a success toast with the given message
- * @param {string} message - Success message to display
- * @param {Object} options - Toast options
  */
 export const showSuccessToast = (message, options = {}) => {
   toast.success(message, {
@@ -89,8 +81,6 @@ export const showSuccessToast = (message, options = {}) => {
 
 /**
  * Handles common API errors, including authorization failures
- * @param {Object} error - Error object from API response
- * @returns {string} Formatted error message
  */
 export const handleApiError = (error) => {
   const errorMessage = extractErrorMessage(error);

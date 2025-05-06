@@ -7,9 +7,6 @@ const VendorTable = ({ vendors = [], onVendorStatusChange }) => {
 
   /**
    * Handles status change for a vendor
-   * @param {Event} e - Click event
-   * @param {number} userId - ID of the vendor
-   * @param {string} newStatus - New status to set (approved, rejected, pending)
    */
   const handleStatusChange = async (e, userId, newStatus) => {
     e.preventDefault();

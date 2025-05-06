@@ -7,17 +7,6 @@ import PropTypes from 'prop-types';
 
 /**
  * FormInput component
- * @param {Object} props - Component props
- * @param {string} props.id - Input id attribute
- * @param {string} props.label - Input label text
- * @param {string} props.type - Input type (text, email, password, etc.)
- * @param {string} props.placeholder - Input placeholder text
- * @param {string} props.value - Input value
- * @param {function} props.onChange - Change handler function
- * @param {boolean} props.required - Whether input is required
- * @param {string} props.error - Error message to display
- * @param {string} props.className - Additional CSS classes
- * @param {boolean} props.disabled - Whether input is disabled
  */
 const FormInput = ({
   id,

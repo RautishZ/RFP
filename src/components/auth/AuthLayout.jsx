@@ -10,10 +10,8 @@ import '../../assets/css/icons.min.css';
 import '../../assets/css/app.min.css';
 import '../../assets/css/style.css';
 
-/**
+/*
  * AuthLayout component
- * @param {Object} props - Component props
- * @param {React.ReactNode} props.children - Authentication form content to render
  */
 const AuthLayout = ({ children }) => {
   return (

@@ -9,9 +9,6 @@ import { userState } from '../../services/userState';
 
 /**
  * ProtectedRoute component
- * @param {Object} props - Component props
- * @param {React.ReactNode} props.children - Child components to render if authenticated
- * @param {Array<string>} props.allowedRoles - Optional array of roles allowed to access this route
  */
 const ProtectedRoute = ({ children, allowedRoles = [] }) => {
   const isAuthenticated = userState.isAuthenticated();

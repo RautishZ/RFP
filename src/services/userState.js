@@ -10,12 +10,6 @@ export const userState = {
   
   /**
    * Sets user data in state and persists to localStorage
-   * @param {Object} data - User data from API response
-   * @param {string} data.token - Authentication token
-   * @param {string} data.user_id - User ID
-   * @param {string} data.type - User type (admin/vendor)
-   * @param {string} data.name - User's name
-   * @param {string} data.email - User's email
    */
   setUserData(data) {
     this.token = data.token;
@@ -44,7 +38,6 @@ export const userState = {
   
   /**
    * Checks if user is authenticated
-   * @returns {boolean} True if user has a valid token
    */
   isAuthenticated() {
     return !!this.token;
@@ -52,7 +45,6 @@ export const userState = {
   
   /**
    * Gets the user type (admin/vendor)
-   * @returns {string|null} User type or null if not authenticated
    */
   getUserType() {
     return this.userInfo?.type;
@@ -60,7 +52,6 @@ export const userState = {
 
   /**
    * Gets the authentication token
-   * @returns {string|null} Token or null if not authenticated
    */
   getToken() {
     return this.token;

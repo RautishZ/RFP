@@ -19,7 +19,6 @@ const Login = () => {
 
   /**
    * Handles input field changes
-   * @param {Event} e - Input change event
    */
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -39,7 +38,6 @@ const Login = () => {
 
   /**
    * Validates form data before submission
-   * @returns {boolean} True if form is valid, false otherwise
    */
   const validateForm = () => {
     const newErrors = {};
@@ -62,7 +60,6 @@ const Login = () => {
 
   /**
    * Handles form submission
-   * @param {Event} e - Form submit event
    */
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -93,7 +90,6 @@ const Login = () => {
 
   /**
    * Handles forgot password link click
-   * @param {Event} e - Click event
    */
   const handleForgotPassword = (e) => {
     e.preventDefault();

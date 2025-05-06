@@ -13,9 +13,6 @@ import {
 
 /**
  * Registers a new vendor
- * @param {Object} vendorData - Vendor registration data
- * @returns {Promise<Object>} Response data on successful registration
- * @throws {Error} If registration fails
  */
 export const registerVendor = async (vendorData) => {
   try {
@@ -72,8 +69,6 @@ export const registerVendor = async (vendorData) => {
 
 /**
  * Fetches the list of vendors
- * @returns {Promise<Array>} List of vendors
- * @throws {Error} If fetching fails or user is not authenticated
  */
 export const getVendorList = async () => {
   try {
@@ -112,8 +107,6 @@ export const getVendorList = async () => {
 
 /**
  * Fetches available categories for vendors
- * @returns {Promise<Array>} List of categories
- * @throws {Error} If fetching fails
  */
 export const getCategories = async () => {
   try {
@@ -145,10 +138,6 @@ export const getCategories = async () => {
 
 /**
  * Updates a vendor's status (approve, reject, or pending)
- * @param {number} userId - The ID of the vendor to update
- * @param {string} status - The new status (approved, rejected, pending)
- * @returns {Promise<Object>} Response data on successful update
- * @throws {Error} If update fails
  */
 export const updateVendorStatus = async (userId, status) => {
   try {
