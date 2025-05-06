@@ -56,9 +56,7 @@ export const getAllRFPs = async (adminId) => {
         throw new Error('Admin ID is required');
       }
     }
-    // const endpoint = `/rfp/getadminrfp/${adminId}`;
-    // Use the admin-specific endpoint for fetching all RFPs
-    const endpoint = `/rfp/getrfp/${adminId}`;
+    const endpoint = `/rfp/all`;
     const response = await api.get(endpoint);
     
     return response.data.rfps || [];
@@ -83,7 +81,7 @@ export const closeRFP = async (rfpId) => {
       throw new Error('Authentication token not found');
     }
     
-    const response = await api.put(`/rfp/closerfp/${rfpId}`, {});
+    const response = await api.get(`/rfp/closerfp/${rfpId}`, {});
     return response.data;
   } catch (error) {
     console.error('Error closing RFP:', error);

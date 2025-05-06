@@ -114,7 +114,14 @@ export const getCategories = async () => {
     const { data } = response;
     
     if (data.response === 'success') {
-      return data.categories;
+      
+      const activeCategories = Array.isArray(data.categories) 
+        ? data.categories.filter(category => 
+            category.status && category.status === 'active')
+        : Object.values(data.categories).filter(category => 
+            category.status && category.status.toLowerCase() === 'active');
+            
+      return activeCategories;
     } else {
       const errorMessage = data.message || data.errors || 'Failed to fetch categories';
       showErrorToast(errorMessage);

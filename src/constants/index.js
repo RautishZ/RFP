@@ -12,7 +12,7 @@ export const ROUTES = {
   RFP: '/rfp',
   ADD_RFP: '/add-rfp',
   RFP_QUOTES: '/rfp-quotes/:id',
-  HOME: '/'
+  HOME: '/',
 };
 
 // User roles

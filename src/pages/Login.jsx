@@ -91,16 +91,6 @@ const Login = () => {
   /**
    * Handles forgot password link click
    */
-  const handleForgotPassword = (e) => {
-    e.preventDefault();
-    toast.info('Password reset functionality will be available soon!', {
-      position: "top-right",
-      autoClose: 5000,
-      hideProgressBar: false,
-      closeOnClick: true,
-      pauseOnHover: true,
-    });
-  };
 
   return (
     <AuthLayout>
@@ -163,9 +153,7 @@ const Login = () => {
                 <Link to="/register" className="text-muted"><i className="mdi mdi-lock mr-1"></i> Register as Vendor</Link>
               </div>
               <div className="mt-4 text-center">
-                <a href="#" onClick={handleForgotPassword} className="text-muted">
-                  <i className="mdi mdi-lock mr-1"></i> Forgot your password?
-                </a>
+                <Link to="/forgot-password" >Forgot your password?</Link> 
               </div>
             </form>
           </div>

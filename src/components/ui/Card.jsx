@@ -2,8 +2,7 @@
  * Card component
  * Reusable card component for consistent UI elements
  */
-import React from 'react';
-import PropTypes from 'prop-types';
+import React from "react";
 
 /**
  * Card component
@@ -11,11 +10,11 @@ import PropTypes from 'prop-types';
 const Card = ({
   title,
   children,
-  className = '',
+  className = "",
   isLoading = false,
-  headerClassName = '',
-  bodyClassName = '',
-  headerActions
+  headerClassName = "",
+  bodyClassName = "",
+  headerActions,
 }) => {
   return (
     <div className={`card ${className}`}>
@@ -41,16 +40,6 @@ const Card = ({
       </div>
     </div>
   );
-};
-
-Card.propTypes = {
-  title: PropTypes.string,
-  children: PropTypes.node.isRequired,
-  className: PropTypes.string,
-  isLoading: PropTypes.bool,
-  headerClassName: PropTypes.string,
-  bodyClassName: PropTypes.string,
-  headerActions: PropTypes.node
 };
 
 export default Card;

@@ -2,24 +2,25 @@
  * LoadingSpinner component
  * Reusable loading spinner with customizable text
  */
-import React from 'react';
-import PropTypes from 'prop-types';
+import React from "react";
 
 /**
  * LoadingSpinner component
  */
 const LoadingSpinner = ({
-  size = '',
-  color = 'primary',
-  text = 'Loading...',
-  className = ''
+  size = "",
+  color = "primary",
+  text = "Loading...",
+  className = "",
 }) => {
   const spinnerClasses = [
-    'spinner-border',
-    size ? `spinner-border-${size}` : '',
+    "spinner-border",
+    size ? `spinner-border-${size}` : "",
     `text-${color}`,
-    className
-  ].filter(Boolean).join(' ');
+    className,
+  ]
+    .filter(Boolean)
+    .join(" ");
 
   return (
     <div className="text-center py-4">
@@ -29,13 +30,6 @@ const LoadingSpinner = ({
       {text && <p className="mt-2">{text}</p>}
     </div>
   );
-};
-
-LoadingSpinner.propTypes = {
-  size: PropTypes.oneOf(['sm', 'md', 'lg', '']),
-  color: PropTypes.oneOf(['primary', 'secondary', 'success', 'danger', 'warning', 'info', 'light', 'dark']),
-  text: PropTypes.string,
-  className: PropTypes.string
 };
 
 export default LoadingSpinner;
